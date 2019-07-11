@@ -1,2 +1,17 @@
 module MyTasksHelper
-end
+
+	def sort_asc(column)
+		link_to"A",{:column => column, :direction => "asc"}
+	end
+
+	def sort_desc(column)
+		link_to"D",{:column => column, :direction => "desc"}
+	end 
+
+        def sort_direction
+          %w[asc desc].incluede?(params[:direction])? params[:direction] :"asc"
+        end
+
+        def sort_column
+          my_tasks.column_names.include?(params[:column])? params[:column] : "sort"
+        end
