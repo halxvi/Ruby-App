@@ -13,5 +13,5 @@ module MyTasksHelper
         end
 
         def sort_column
-          MyTasks.column_names.include?(params[:column])? params[:column] : "sort"
+          MyTask.column_names.include?(params[:column])? params[:column] : "sort"
         end
