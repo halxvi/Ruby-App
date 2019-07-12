@@ -4,7 +4,7 @@ class MyTasksController < ApplicationController
   # GET /my_tasks
   # GET /my_tasks.json
   def index
-    @my_tasks = MyTask.all.order(sort_column+''+sort_direction)
+    @my_tasks = MyTasks.all.order(sort_column+''+sort_direction)
   end
 
   # GET /my_tasks/1
