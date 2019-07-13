@@ -1,0 +1,39 @@
+
+<p id="notice"><%= notice %></p>
+<div class="container">
+<h1>Tasks</h1>
+
+<table>
+  <thead> 
+<%= will_paginate %>
+    <tr>
+      <th>Username</th>
+      <th>Task<%= sort_asc("sort") %><%= sort_desc("sort") %></th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Accomplished flag</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @my_tasks.each do |my_task| %>
+      <tr>
+        <td><%= my_task.username %></td>
+        <td><%= my_task.task %></td>
+        <td><%= my_task.start_date %></td>
+        <td><%= my_task.end_date %></td>
+        <td><%= my_task.accomplished_flag %></td>
+        <td><%= link_to 'Show', my_task %></td>
+        <td><%= link_to 'Edit', edit_my_task_path(my_task) %></td>
+        <td><%= link_to 'Destroy', my_task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New My Task', new_my_task_path %>
+
+</div>
