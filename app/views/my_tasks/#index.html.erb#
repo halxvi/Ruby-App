@@ -5,9 +5,10 @@
 
 <table>
   <thead> 
+<%= will_paginate %>
     <tr>
       <th>Username</th>
-      <th>Task<%= sort_asc("task") %><%= sort_desc("task") %></th>
+      <th>Task<%=sort_asc("sort")%><%=sort_desc("sort")%></th>
       <th>Start date</th>
       <th>End date</th>
       <th>Accomplished flag</th>
