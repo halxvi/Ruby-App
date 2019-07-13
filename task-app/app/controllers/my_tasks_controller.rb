@@ -1,10 +1,9 @@
 class MyTasksController < ApplicationController
   before_action :set_my_task, only: [:show, :edit, :update, :destroy]
-  include MyTasksHelper
   # GET /my_tasks
   # GET /my_tasks.json
   def index
-    @my_tasks = MyTask.order(sort_column + ' ' + sort_direction)
+    @my_tasks = MyTask.all
   end
 
   # GET /my_tasks/1
