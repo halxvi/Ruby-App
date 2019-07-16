@@ -6,11 +6,11 @@
 <table>
   <thead> 
     <tr>
-      <th>Username<%= sort_link(@search, defalut_order: :desc) %></th>
-      <th>Task<%= sort_link(@search,defalut_order: :desc) %></th>
-      <th>Start date<%= sort_link(@search,defalut_order: :desc) %></th>
-      <th>End date<%= sort_link(@search,defalut_order: :desc) %></th>
-      <th>Accomplished flag<%= sort_link(@search,defalut_order: :desc) %></th> 
+      <th><%= sort_link(@q,:Username, defalut_order: :desc) %></th>
+      <th><%= sort_link(@q,:Task,defalut_order: :desc) %></th>
+      <th><%= sort_link(@q,:Start date,defalut_order: :desc) %></th>
+      <th><%= sort_link(@q,:End date,defalut_order: :desc) %></th>
+      <th><%= sort_link(@q,:Accomplished flag,defalut_order: :desc) %></th> 
       <th colspan="3"></th>
     </tr>
   </thead>
