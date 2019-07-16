@@ -4,7 +4,7 @@ class MyTasksController < ApplicationController
   # GET /my_tasks.json
   def index
     @search  = MyTask.ransack(params[:q])
-    @result  = @search.result
+    @result  = @search.result(distinct:true)
   end
 
   # GET /my_tasks/1
