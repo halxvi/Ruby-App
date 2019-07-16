@@ -1,2 +1,0 @@
-class MyTask < ApplicationRecord
-end
