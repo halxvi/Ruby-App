@@ -7,8 +7,8 @@
   <thead> 
     <tr>
       <th>Username</th>
-      <th>Task<%= sort_asc("task") %><%= sort_desc("task") %></th>
-      <th>Start date</th>
+      <th>Task</th>
+      <th>Start date<% =sort_link(@search, :start_date) %></th>
       <th>End date</th>
       <th>Accomplished flag</th>
       <th colspan="3"></th>
