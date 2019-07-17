@@ -5,8 +5,7 @@ class MyTasksController < ApplicationController
   helper_method :sort_column, :sort_direction
   include MyTasksHelper
   def index
-    @my_tasks = MyTask.all
-    @tasks = MyTask.order(sort_column + " " + sort_direction)
+    @my_tasks = MyTask.all.order(sort_column + " " + sort_direction)
   end
   
   private
