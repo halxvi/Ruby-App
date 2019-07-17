@@ -1,15 +1,2 @@
 module MyTasksHelper
-
-
-
-
-
-
-
-
-
-
-
-
-
 end
