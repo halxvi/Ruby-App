@@ -12,7 +12,7 @@ class MyTasksController < ApplicationController
   private
 
   def sort_column
-    MyTask.column_names.include?(params[:q]) ? params[:sort] : "name"
+    MyTask.column_names.include?(params[:sort]) ? params[:sort] : "name"
   end
 
   def sort_direction
