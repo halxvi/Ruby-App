@@ -2,6 +2,7 @@ class MyTasksController < ApplicationController
   before_action :set_my_task, only: [:show, :edit, :update, :destroy]
   # GET /my_tasks
   # GET /my_tasks.json
+@import MyTasksHelper
   def index
     @my_tasks = MyTask.all
     @tasks = MyTask.order(sort_column + '' + sort_direction)
