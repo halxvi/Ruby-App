@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2019_05_16_032201) do
     t.string "task"
     t.datetime "start_date"
     t.datetime "end_date"
-    t.integer "accomplished_flag"
+    t.checkbox  "accomplished_flag"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
