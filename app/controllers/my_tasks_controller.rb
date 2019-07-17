@@ -4,8 +4,17 @@ class MyTasksController < ApplicationController
   # GET /my_tasks.json
   def index
     @my_tasks = MyTask.all
-    @q = MyTask.ransack(params[:q])
-    @tasks = @q.result(distinct: true)
+    @tasks = MyTask.order(sort_column + '' + sort_direction)
+  end
+  
+  private
+
+  def sort_column
+    MyTask.column_names.include?(params[:q]) ? params[:sort] : "name"
+  end
+
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
 
   # GET /my_tasks/1
