@@ -8,10 +8,10 @@ body{background-image: image-url("aozora.jpg")}
   background-position: right center;
 }
 
-.pretty a.asc {
+.pretty a .asc {
   background-image: image-url("up_arrow.png");
 }
 
-.pretty a.desc {
+.pretty a .desc {
   background-image: image-url("down_arrow.png");
 }
