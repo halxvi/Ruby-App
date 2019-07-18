@@ -5,7 +5,7 @@ class CreateMyTasks < ActiveRecord::Migration[5.2]
       t.string :task
       t.datetime :start_date
       t.datetime :end_date
-      t.integer :accomplished_flag
+      t.boolean :accomplished_flag
 
       t.timestamps
     end
