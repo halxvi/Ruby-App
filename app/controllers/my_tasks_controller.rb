@@ -25,7 +25,7 @@ class MyTasksController < ApplicationController
 
   # GET /my_tasks/new
   def new
-    @my_task = MyTask.new
+    @my_tasks = MyTask.new
   end
 
   # GET /my_tasks/1/edit
