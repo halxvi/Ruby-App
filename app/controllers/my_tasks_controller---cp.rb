@@ -1,10 +1,21 @@
 class MyTasksController < ApplicationController
   before_action :set_my_task, only: [:show, :edit, :update, :destroy]
-  include MyTasksHelper
   # GET /my_tasks
   # GET /my_tasks.json
+  helper_method :sort_column, :sort_direction
+  include MyTasksHelper
   def index
-    @my_tasks = MyTask.all.order(sort_column +)
+    @my_tasks = MyTask.all
+  end
+  
+  private
+
+  def sort_column
+    MyTask.column_names.include?(params[:sort]) ? params[:sort] : "username"
+  end
+
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
 
   # GET /my_tasks/1
