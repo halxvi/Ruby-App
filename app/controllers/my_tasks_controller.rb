@@ -13,7 +13,7 @@ class MyTasksController < ApplicationController
   end
 
   def sort_column
-      User.column_names.include?(params[:sort]) ? params[:sort] : "username"
+      MyTask.column_names.include?(params[:sort]) ? params[:sort] : "username"
   end
 
   # GET /my_tasks/1
