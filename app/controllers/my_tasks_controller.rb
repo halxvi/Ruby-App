@@ -78,6 +78,6 @@ class MyTasksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def my_task_params
-      params.require(:my_task).permit(:username, :task, :start_date, :end_date, :accomplished_flag)
+      params.require(:my_task).permit(:username, :task, :start_date, :end_date)
     end
 end
