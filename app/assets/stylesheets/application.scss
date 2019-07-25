@@ -1,5 +1,7 @@
 body{background-image: image-url("aozora.jpg");}
-.container{background-color:rgba(255,255,255,0.7);}
+.container{background-color:rgba(255,255,255,0.7);
+margin-left:auto;
+margin-right:auto;}
 td{padding: 8px;}
 @import "bootstrap";
 
