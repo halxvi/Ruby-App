@@ -1,3 +1,3 @@
 # Ruby-App
 
-This is an apprication for my assignments.
+This is an rails apprication for my assignments.
